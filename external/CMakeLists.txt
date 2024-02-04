@@ -24,6 +24,11 @@ if (NOT TARGET imgui)
     set_target_properties(imgui PROPERTIES FOLDER ${EXTERNAL_DIR}/imgui)
 endif ()
 
+if (NOT TARGET optix)
+    include(optix)
+    set_target_properties(optix PROPERTIES FOLDER ${EXTERNAL_DIR}/optix)
+endif ()
+
 if (NOT TARGET spdlog)
     add_subdirectory(spdlog)
     set_target_properties(spdlog PROPERTIES FOLDER ${EXTERNAL_DIR}/spdlog)
